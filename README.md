@@ -74,6 +74,7 @@ Backend Application:
 Navigate to the kalaha-game-ui module folder and run following command and access the application through any Rest client tool http://localhost:8080/ or http://localhost:8080/swagger-ui/index.html
         mvn clean install
         mvn spring-boot:run
+        
 Frontend Application:
 
 Navigate to the kalaha-service module folder and run following command and access the application through http://localhost:4200/
