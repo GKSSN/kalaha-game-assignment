@@ -8,7 +8,7 @@ Players can play this kalaha game via web based user interface developed in Angu
 
 | Component                 | Technology                 |
 | ------------------------- |--------------------------- |
-| Frontend                  | Angular 14                 |
+| Frontend                  | Angular 7                 |
 | Backend                   | Spring Boot 3.14           |
 | Frontend Build tools      | angular-cli, npm           |
 | Backend  Build tools      | Apache Maven 3.8.7, JDK17  |
@@ -72,7 +72,7 @@ UI component is built with angulalr 8 which runs on node.js. I have created two 
 Backend Application:
 
 Navigate to the kalaha-game-ui module folder and run following command and access the application through any Rest client tool http://localhost:8080/ or http://localhost:8080/swagger-ui/index.html
-
+        mvn clean install
         mvn spring-boot:run
 Frontend Application:
 
