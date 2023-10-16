@@ -1,0 +1,30 @@
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    
+    <div class="form">
+    <div class="">
+
+      <div class="cover">
+        <h1>KALAHA GAME</h1>
+        <p>Please enter players name to start the game</p>
+        <div class="col-5">
+          <form #gameForm = "ngForm" (ngSubmit) = "onSubmit()" >
+            <div class="form-group">
+              <input type="text" class="form-control" id="playerA" [formControl]="playerAName"  required minlength="4" placeholder="Player A Name" >
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="playerB"  [formControl]="playerBName"  placeholder="Player B Name">
+            </div>
+            <div class="form-field">
+            <button type="submit" class="btn btn-primary" >Start Game</button>
+            </div>
+            <p class="errorMessage">{{message}}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+

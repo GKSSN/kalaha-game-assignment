@@ -1,0 +1,22 @@
+@startuml
+participant Player
+Player -> GameController : startGame (PlayersInfo)
+activate GameController
+GameController -> GameService : startGame (PlayersInfo)
+activate GameService
+GameService -> GameServiceImpl : startGame (PlayersInfo)
+activate GameServiceImpl
+GameServiceImpl -> PlayerValidator : isValidPlayerInfo (PlayersInfo)
+activate PlayerValidator
+PlayerValidator --> GameServiceImpl
+deactivate PlayerValidator
+GameServiceImpl -> SaveGameState : setGameState (game)
+activate SaveGameState
+SaveGameState --> GameServiceImpl
+deactivate SaveGameState
+GameServiceImpl --> GameService
+deactivate GameServiceImpl
+GameService --> GameController
+deactivate GameService
+return
+@enduml

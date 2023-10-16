@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kalaha Game</title>
+  <link href="http://fonts.googleapis.com/css?family=Fontdiner+Swanky|Roboto+Slab" rel="stylesheet">
+
+</head>
+<body>
+<div class="site-wrapper">
+  <div class="">
+
+    <div class="board ">
+
+      <div class="player-two store"><p><img class="img-responsive stone-img"
+                                            src="assets/stone.png">{{game.board.pits[13]}}</p></div>
+
+      <div class="rows">
+        <p>{{game.playerList[0].name}}</p>
+        <div class="row player-two ">
+
+          <div class="pit">
+            <div (click)="submit(7)" *ngIf="checkPlayerBValidMove && game.board.pits[7]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerBValidMove || game.board.pits[7] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[7]}}</p></div>
+
+          <div class="pit">
+            <div (click)="submit(8)" *ngIf="checkPlayerBValidMove && game.board.pits[8]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerBValidMove || game.board.pits[8] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[8]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(9)" *ngIf="checkPlayerBValidMove && game.board.pits[9]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerBValidMove || game.board.pits[9] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[9]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(10)" *ngIf="checkPlayerBValidMove && game.board.pits[10]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerBValidMove || game.board.pits[10] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[10]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(11)" *ngIf="checkPlayerBValidMove && game.board.pits[11]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerBValidMove || game.board.pits[11] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[11]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(12)" *ngIf="checkPlayerBValidMove && game.board.pits[12]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerBValidMove || game.board.pits[12] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[12]}}</p></div>
+        </div>
+        <p class="status message">{{message}}</p>
+
+        <div class="row player-one ">
+
+          <div class="pit">
+            <div (click)="submit(0)" *ngIf="checkPlayerAValidMove && game.board.pits[0]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerAValidMove || game.board.pits[0] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[0]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(1)" *ngIf="checkPlayerAValidMove && game.board.pits[1]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerAValidMove || game.board.pits[1] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[1]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(2)" *ngIf="checkPlayerAValidMove && game.board.pits[2]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerAValidMove || game.board.pits[2] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[2]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(3)" *ngIf="checkPlayerAValidMove && game.board.pits[3]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerAValidMove || game.board.pits[3] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[3]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(4)" *ngIf="checkPlayerAValidMove && game.board.pits[4]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerAValidMove || game.board.pits[4] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[4]}}</p></div>
+          <div class="pit">
+            <div (click)="submit(5)" *ngIf="checkPlayerAValidMove && game.board.pits[5]>0" class="current-player-enable"><img
+              class="img-responsive stone-img"
+              src="assets/stone.png"></div>
+            <div *ngIf="!checkPlayerAValidMove || game.board.pits[5] ===0"><img class="img-responsive stone-img" src="assets/stone.png"></div>
+            <p>{{game.board.pits[5]}}</p></div>
+        </div>
+
+
+        <p>{{game.playerList[1].name}}</p>
+      </div>
+      <p>
+        <div class="player-one store">
+      <p><img class="img-responsive stone-img" src="assets/stone.png">{{game.board.pits[6]}}</p></div>
+  </div>
+
+
+</div>
+
+
+<button *ngIf="game.completed" (click)="reset()" class="new-game">Reset Game</button>
+</div>
+</body>
+</html>

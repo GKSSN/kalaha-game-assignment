@@ -1,0 +1,38 @@
+@startuml
+participant Player
+Player -> GameController : sowStones(currentIndex)
+activate GameController
+GameController -> GameService : sowStones(currentIndex)
+activate GameService
+GameService -> GameServiceImpl : sowStones(currentIndex)
+activate GameServiceImpl
+GameServiceImpl -> SaveGameState : getGameState
+activate SaveGameState
+SaveGameState --> GameServiceImpl
+deactivate SaveGameState
+GameServiceImpl -> GameValidator : isValidCurrentIndex
+activate GameValidator
+GameValidator --> GameServiceImpl
+deactivate GameValidator
+GameServiceImpl -> GameServiceImpl : () ->
+activate GameServiceImpl
+GameServiceImpl -> GameProcessor : execute
+activate GameProcessor
+GameProcessor ->  GameProcessor : sowStones(game) ->
+GameProcessor ->  GameProcessor : captureStonesFromCurrentAndOppositePitIntoOwnBigPit(game) ->
+GameProcessor ->  GameProcessor : determineNextPlayer(game) ->
+GameProcessor ->  GameProcessor : declareWinner(game) ->
+GameProcessor --> GameServiceImpl
+deactivate GameProcessor
+GameServiceImpl --> GameServiceImpl
+deactivate GameServiceImpl
+GameServiceImpl -> SaveGameState : getGameState
+activate SaveGameState
+SaveGameState --> GameServiceImpl
+deactivate SaveGameState
+GameServiceImpl --> GameService
+deactivate GameServiceImpl
+GameService --> GameController
+deactivate GameService
+return
+@enduml
