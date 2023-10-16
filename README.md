@@ -6,12 +6,12 @@ Players can play this kalaha game via web based user interface developed in Angu
 
 ## Technologies Used
 
-| Component                 | Technology           |
-| -------------             |:-------------:       |
-| Frontend                  | Angular 14           |
-| Backend                   | Spring Boot 3.14     |
-| Frontend Build tools      | angular-cli, npm     |
-| Backend  Build tools      | angular-cli, npm     |
+| Component                 | Technology                 |
+| ------------------------- |--------------------------- |
+| Frontend                  | Angular 14                 |
+| Backend                   | Spring Boot 3.14           |
+| Frontend Build tools      | angular-cli, npm           |
+| Backend  Build tools      | Apache Maven 3.8.7, JDK17  |
 
 ## Kalaha Server
 
